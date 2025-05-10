@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./fonts.css";
 import { ThemeProvider } from "../context/ThemeContext";
+import Background from "../components/Background";
 
 export const metadata = {
   title: "SolSwarm - Zero-Fee Trading Bot",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Background />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

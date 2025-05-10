@@ -85,14 +85,13 @@ const SocialLinks: React.FC = () => {
               variants={fadeIn('up', 0.1 * index)}
               whileHover={{ y: -8, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-[color:var(--card-background)] border border-[color:var(--accent)]"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${platform.color}`}></div>
               <div className="relative p-6 flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-4">
-                  {platform.icon}
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-[color:var(--background)] border border-[color:var(--accent)]">
+                  <span className="text-[color:var(--primary)] dark:text-[color:var(--primary)]">{platform.icon}</span>
                 </div>
-                <span className="text-white font-medium">{platform.name}</span>
+                <span className="font-medium text-[color:var(--foreground)] dark:text-[color:var(--foreground)]">{platform.name}</span>
               </div>
             </motion.a>
           ))}
